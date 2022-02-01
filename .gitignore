@@ -1,0 +1,3 @@
+node_modules/
+seedDB.js
+.env

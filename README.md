@@ -45,7 +45,9 @@ This is an express REST API that uses mongoDB as its database and stripe to proc
 
 ### Products
 GET  `/api/products/` - gets all products from the database and returns them in an array. 
+
 GET `/api/products/:id` - gets a product with _id matching the “:id” url param. 
+
 POST `/api/products/create` - creates a product with ...
 ```
 // ** Product ** \\
@@ -94,8 +96,10 @@ request.body : {
 
 
 ### Orders
-GET  `/api/orders` - Returns all orders 
+GET  `/api/orders` - Returns all orders
+ 
 GET  `/api/orders/:id` - Returns order with matching id
+
 POST `/api/orders/create`  - creates a  user with …
 
 ```
@@ -117,7 +121,9 @@ request.body: {
 
 ### Transactions
 GET  `/api/transactions/` - Returns all transactions 
+
 GET  `/api/transactions/:id` - Returns transaction with matching id
+
 POST  `api/transactions/create`  - creates a transaction with …
 ```
 //createTransaction

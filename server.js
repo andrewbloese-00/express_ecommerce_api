@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express')
 const { path } = require('express/lib/application');
 const { herokuCheck } = require('./middleware/herokuCheck');
+const cors = require('cors');
 const errorHandler = require('./middleware/error');
 
 //init the express server

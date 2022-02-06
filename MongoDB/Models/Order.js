@@ -30,11 +30,27 @@ const OrderSchema = new mongoose.Schema({
         type: String, 
         required:  [ true , 'Order must have shipping zip'] , 
     },
-    transaction_ref: {
+    paid: {
+        type: Boolean,
+        required: [true, 'Order must have \"paid\" flag']
+    },
+    transaction_ref:{
+        type: String
+    },
+    order_status: {
         type: String,
-        required: [ true , 'Order must have a reference to a transaction document']
+        default: "Awaiting Payment"
     }
 })
+OrderSchema.methods.setStatus = function ( newStatus ) {
+    this.status = newStatus;
+}
+
 
 const Order = mongoose.model('Order' , OrderSchema);
+
+
+
+
+
 module.exports = Order;

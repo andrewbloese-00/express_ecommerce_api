@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get( '/' , getTransactions )
 router.get( '/:id' , getTransaction )
-router.post( '/create ' , createTransaction )
+router.route('/create').post(createTransaction);
 
 
 module.exports = router

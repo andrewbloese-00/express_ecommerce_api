@@ -39,7 +39,7 @@ exports.getTransaction = async ( req , res , next ) => {
 
 exports.createTransaction = async ( req , res , next ) => {
 
-    const { order_ref , subtotal , tax , total , customerEmail } = req.body
+    const { order_ref , subtotal , tax , total , customer_email } = req.body
     const created_on = new Date() 
 
 
@@ -50,12 +50,16 @@ exports.createTransaction = async ( req , res , next ) => {
             tax , 
             total , 
             created_on ,
-            customerEmail,
+            customer_email,
         })
 
         if( !transaction ) { 
             resError( res , 500 , 'Failed to create a transaction for this ')
         }
+
+        //add the transaction reference to the 
+        transaction.createOrderRef( next )
+        
 
         res.status(200).json({
             msg: `Transaction ${transaction._id}` ,

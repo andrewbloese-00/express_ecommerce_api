@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl -X POST http://localhost:8080/api/products/create -H "Content-Type: application/json" -d "{\"name\":\"Product 2\",\"imageUrl\":\"https://images.unsplash.com/photo-1613447326896-c7b8a0ab9b43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHQlMjBzaGlydHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60\",\"description\":\"Magna veniam aliqua non cupidatat minim amet nostrud aliquip reprehenderit amet incididunt. Ex fugiat nostrud fugiat laborum veniam irure esse fugiat. Laboris amet quis et et amet culpa cupidatat sunt do enim.\",\"price\":1400,\"inStock\":17,\"tag\":\"Shirts\",\"options\":[\"XS\",\"S\",\"M\",\"L\",\"XL\",\"XXL\"]}"

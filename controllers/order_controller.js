@@ -11,7 +11,7 @@ exports.getOrders = async ( req , res , next ) => {
 }
 exports.getOrder = async ( req , res , next ) => { 
     try {
-        const orderId = req.param.id;
+        const orderId = req.params.id;
         if( !orderId ){ 
             resError( res , 401 , 'No order id provided')
         }
@@ -29,10 +29,10 @@ exports.getOrder = async ( req , res , next ) => {
     
 }
 exports.createOrder = async ( req , res , next ) => { 
-    const { amount , items , shipping_address , shipping_state , shipping_city , shipping_zip , transaction_ref } = req.body
+    const { amount , items , shipping_address , shipping_state , shipping_city , shipping_zip } = req.body
     const created_on = Date.now()
 
-    if( !amount || !items || !shipping_address || !shipping_state || !shipping_city || !shipping_zip || !transaction_ref) {
+    if( !amount || !items || !shipping_address || !shipping_state || !shipping_city || !shipping_zip ) {
         resError(res , 401 , 'All data must be provided for an order to be created!')
     }
 
@@ -45,7 +45,8 @@ exports.createOrder = async ( req , res , next ) => {
             shipping_state,
             shipping_city,
             shipping_zip,
-            transaction_ref,
+            paid: false,
+            
         })
 
         if(!order) {

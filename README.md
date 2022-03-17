@@ -100,7 +100,7 @@ GET  `/api/orders` - Returns all orders
  
 GET  `/api/orders/:id` - Returns order with matching id
 
-POST `/api/orders/create`  - creates a  user with …
+POST `/api/orders/create`  - creates an order with …
 
 ```
 //createOrder

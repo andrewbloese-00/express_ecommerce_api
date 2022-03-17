@@ -4,8 +4,8 @@ exports.axiosConfig = {
 
 exports.productTemplate = {
     name: 'Test Product',
-    imageUrl: '',
-    description: '',
+    imageUrl: 'https://images.unsplash.com/photo-1621951833860-c1ceea369593?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dCUyMHNoaXJ0fGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+    description: 'Magna veniam aliqua non cupidatat minim amet nostrud aliquip reprehenderit amet incididunt. Ex fugiat nostrud fugiat laborum veniam irure esse fugiat. Laboris amet quis et et amet culpa cupidatat sunt do enim.',
     price: 1000,
     inStock: 10,
     tag: 'Shirt',
@@ -45,7 +45,7 @@ exports.orderTemplate = {
 
 
 exports.transactionTemplate = { 
-    order_ref: '61fe27d6da9c31dba90efdcb',
+    order_ref: '62001ab7ba5ba0c905b27b0a',
     subtotal: 1000,
     tax: 80,
     total: 1080,

@@ -42,9 +42,6 @@ const OrderSchema = new mongoose.Schema({
         default: "Awaiting Payment"
     }
 })
-OrderSchema.methods.setStatus = function ( newStatus ) {
-    this.status = newStatus;
-}
 
 
 const Order = mongoose.model('Order' , OrderSchema);
